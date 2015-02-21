@@ -20,7 +20,7 @@
 
 <body>
 
-<div ng-app="">
+<div ng-app="" ng-controller="personController">
 
 <p>
 <button ng-disabled="mySwitch">Click Me!</button>
@@ -34,7 +34,32 @@
 
 <p ng-show="false">I am not visible.</p>
 
+<button ng-click="counter.count = counter.count + 1">Click me!</button>
+
+<p>{{ counter.count }}</p>
+
+<button ng-click="toggle()">Toggle</button>
+
+<p ng-hide="myVar">
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+</p>
+
 </div>
+
+
+<script>
+function personController($scope) {
+    $scope.firstName = "John",
+    $scope.lastName = "Doe"
+    $scope.myVar = false;
+    $scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    };
+}
+</script>
 
 </body>
 </html>
