@@ -7,10 +7,21 @@
 
 <body>
 
-<div data-ng-app="">
- 	<p>Name: <input type="text" data-ng-model="name"></p>
- 	<p data-ng-bind="name"></p>
+<div ng-app="" ng-controller="personController">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
 </div>
+
+<script>
+function personController($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+}
+</script>
 
 </body>
 </html>

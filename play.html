@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+
+<div ng-app="" ng-init="quantity=1;cost=5;person={firstName:'John',lastName:'Doe'};points=[1,'a',19,2,40]">
+
+<p>The name is <span ng-bind="person.firstName + ' ' + person.lastName"></span></p>
+
+<p>Total in dollar: {{ quantity * cost }}</p>
+
+<p>The points are {{ points[2] }}</p>
+
+<p>The points are <span ng-bind="points[2]"></span></p>
+
+</div>
+
+</body>
+</html>
