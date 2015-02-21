@@ -8,15 +8,33 @@
 <body>
 
 
-<div ng-app="" ng-init="quantity=1;cost=5;person={firstName:'John',lastName:'Doe'};points=[1,'a',19,2,40]">
+<div ng-app="" ng-init="quantity=1;cost=5;person={firstName:'John',lastName:'Doe'};points=[1,'a',19,2,40];names=['Jani','Hege','Kai'];names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
 
 <p>The name is <span ng-bind="person.firstName + ' ' + person.lastName"></span></p>
 
-<p>Total in dollar: {{ quantity * cost }}</p>
+<p>Quantity: <input type="number"	ng-model="quantity"><br/>
+Costs:    <input type="number" ng-model="price"></p>
 
-<p>The points are {{ points[2] }}</p>
+<p>Total in dollar: {{ quantity * cost + price }}</p>
+
+<p>The points are {{ points[3] }}</p>
 
 <p>The points are <span ng-bind="points[2]"></span></p>
+
+  <ul>
+    <li ng-repeat="x in names">
+      {{ x }}
+    </li>
+  </ul>
+
+  <ul>
+  	<li ng-repeat="x in names">
+    {{ x.name + ', ' + x.country }}
+  	</li>
+  </ul>
 
 </div>
 
