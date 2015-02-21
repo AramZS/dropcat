@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<style>
+	table, th , td {
+	  border: 1px solid grey;
+	  border-collapse: collapse;
+	  padding: 5px;
+	}
+	table tr:nth-child(odd) {
+	  background-color: #f1f1f1;
+	}
+	table tr:nth-child(even) {
+	  background-color: #ffffff;
+	}
+	</style>
+</head>
+
+<body>
+
+<div ng-app="">
+
+<p>
+<button ng-disabled="mySwitch">Click Me!</button>
+</p>
+
+<p>
+<input type="checkbox" ng-model="mySwitch">Button
+</p>
+
+<p ng-show="true">I am visible.</p>
+
+<p ng-show="false">I am not visible.</p>
+
+</div>
+
+</body>
+</html>
