@@ -11,24 +11,7 @@
 
 <div class="container">
 
-<h3>Users</h3>
-
-<table class="table table-striped">
-  <thead><tr>
-    <th>Edit</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-  </tr></thead>
-  <tbody><tr ng-repeat="user in users">
-    <td>
-      <button class="btn" ng-click="editUser(user.id)">
-      <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
-      </button>
-    </td>
-    <td>{{ user.fName }}</td>
-    <td>{{ user.lName }}</td>
-  </tr></tbody>
-</table>
+<div ng-include="'play-table-part.html'"></div>
 
 <hr>
 <button class="btn btn-success" ng-click="editUser('new')">
@@ -77,7 +60,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
-<script src = "myUsers.js"></script>
+<script src = "myUsersSet.js"></script>
 
 
 
