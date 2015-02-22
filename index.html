@@ -2,26 +2,17 @@
 <html>
 
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
 </head>
 
-<body>
+<body ng-app="dropCat">
 
-<div ng-app="" ng-controller="personController">
 
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{firstName + " " + lastName}}
-
-</div>
-
-<script>
-function personController($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-}
-</script>
+<footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="lib/angularjs-wp-api/angular-wp-api.js"></script>
+	<script src="assets/js/app.js"></script>
+</footer>
 
 </body>
 </html>
