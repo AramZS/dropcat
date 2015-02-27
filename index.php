@@ -27,6 +27,7 @@
 	<script src="lib/angularjs-wp-api/angular-wp-api.js"></script>
 	<script src="lib/ngResource/angular-resource.js"></script>
 	<script src="assets/js/app.js"></script>
+	<script src="assets/js/dropController.js"></script>
 </footer>
 
 </body>
