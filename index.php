@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
-
+<?php require_once('functions.php'); ?>
 <head>
-	<link rel="stylesheet" href="stylesheets/app.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DropCat</title>
+	<link rel="stylesheet" href="assets/stylesheets/app.css" />
 	<script src="bower_components/modernizr/modernizr.js"></script>
+
 </head>
 
 <body ng-app="dropCat" ng-controller="dropController">
+	<header class="row">
+		<div class="large-10 columns">
+			<div class="row">
+				<div class="large-12 columns">
+					<h1>DropCats</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<h3>An AramZS "Myopic Web" Project</h3>
+				</div>
+			</div>
+		</div>
+		<div class="large-2 columns">
+			<img src="assets/images/logo1.gif">
+		</div>
+	</header>
+
 
   <label class="control-label">Category Slug:</label>
   <div class="">
@@ -23,7 +44,28 @@
 </ul>
 
 
-<footer>
+<footer class="row">
+	<div class="large-12 columns crafted-with">
+		<div class="row">
+			<?php 
+				dropcat()->templates->the_view_for('crafted-with', array('by' => 'Crafted With:'));
+
+				dropcat()->templates->the_view_for('crafted-with', array('by' => 'WordPress'));
+
+				dropcat()->templates->the_view_for('crafted-with', array('by' => 'AngularJS'));
+
+				dropcat()->templates->the_view_for('crafted-with', array('by' => 'WP-API'));
+			?>
+		</div>
+		<div class="row">
+			<?php 
+				dropcat()->templates->the_view_for('crafted-with', array('by' => 'Foundation'));
+			?>
+		</div>
+
+
+
+
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/foundation/js/foundation.js"></script>
