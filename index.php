@@ -73,6 +73,7 @@
 	<script src="assets/js/dropController.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/foundation/js/foundation.js"></script>
+	<script src="assets/js/foundation.js"></script>
 </footer>
 
 </body>
