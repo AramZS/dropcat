@@ -1,0 +1,19 @@
+// DropCat's special settings
+// Another background? #cdd4d9
+
+body {
+	background-color: $black;
+	color: $white;
+	header {
+		h1, h3 {
+			color: $white;
+		}
+	}
+	footer {
+		h6 {
+			color: $white;
+		}
+	}
+}
+
+$body-font-color: $white !default;
