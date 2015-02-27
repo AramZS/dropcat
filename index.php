@@ -2,8 +2,8 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="stylesheets/app.css" />
-    
+	<link rel="stylesheet" href="stylesheets/app.css" />
+	<script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 
 <body ng-app="dropCat" ng-controller="dropController">
@@ -29,7 +29,6 @@
 	<script src="bower_components/foundation/js/foundation.js"></script>
 	<script src="lib/angularjs-wp-api/angular-wp-api.js"></script>
 	<script src="lib/ngResource/angular-resource.js"></script>
-	<script src="bower_components/modernizr/modernizr.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="assets/js/dropController.js"></script>
 </footer>
