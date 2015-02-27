@@ -29,6 +29,9 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 
 	// Get the feed from a category by name
 	$scope.getCatFeed = function(name) {
+		if (0 < name.length){
+			name = $scope.catName;
+		}
 		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.postsEndPoint+$scope.categoryNameFilter+name)
     		.success(function(response) 
     			{

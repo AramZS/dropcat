@@ -9,7 +9,7 @@
 
 </head>
 
-<body ng-app="dropCat" ng-controller="dropController">
+<body ng-app="dropCat" ng-controller="dropController" ng-init="getCatFeed('news')">
 	<header class="row">
 		<div class="large-10 columns">
 			<div class="row">
@@ -67,12 +67,12 @@
 
 
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/foundation/js/foundation.js"></script>
 	<script src="lib/angularjs-wp-api/angular-wp-api.js"></script>
 	<script src="lib/ngResource/angular-resource.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="assets/js/dropController.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/foundation/js/foundation.js"></script>
 </footer>
 
 </body>
