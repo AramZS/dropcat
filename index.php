@@ -9,7 +9,7 @@
 
 </head>
 
-<body ng-app="dropCat" ng-controller="dropController" ng-init="getCatFeed('news')">
+<body ng-app="dropCat" ng-controller="dropController" ng-init="getCatFeed('news');getCategoryParents();">
 	<header class="row">
 		<div class="large-10 columns">
 			<div class="row">
@@ -27,6 +27,12 @@
 			<img src="assets/images/logo1.gif">
 		</div>
 	</header>
+
+<ul>
+  <li ng-repeat="x in categoryParents">
+    {{ x.name + ', ' + x.ID }}
+  </li>
+</ul>
 
 
   <label class="control-label">Category Slug:</label>
