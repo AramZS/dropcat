@@ -20,8 +20,8 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 
 	//Manipulatable Array Storage
 	$scope.posts = '';
-	$scope.categoryParents = '';
-	$scope.categoryChildren = '';
+	$scope.categoryParents = [];
+	$scope.categoryChildren = [];
 
 	//Tick-ready storage
 	// @todo this - https://docs.angularjs.org/api/ng/service/$interval
@@ -52,6 +52,23 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     				}
     			}
     		);
+	}
+
+	$scope.getCategoryParents = function(){
+		//console.log('Get parent cats.');
+		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.catEndPoint)
+    		.success(function(response) 
+    			{
+    				var allCats = response;
+    				for (i = 0; i < allCats.length; i++) {
+    					//console.log(allCats[i].parent);
+    					if ( allCats[i].parent == null ) {
+    						//console.log('was null');
+    						$scope.categoryParents.push(allCats[i]);
+    					}
+    				}
+    			}
+    		);	
 	}
 
 });
