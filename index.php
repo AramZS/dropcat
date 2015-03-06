@@ -52,7 +52,8 @@
 
 <ul>
   <li ng-repeat="x in posts">
-    {{ x.title + ', ' + x.ID + ', ' + x.featured_image.attachment_meta.sizes.thumbnail.url }}
+    {{ x.title + ', ' + x.ID }}
+    <img src="{{x.featured_image.attachment_meta.sizes.thumbnail.url}}" />
   </li>
 </ul>
 
