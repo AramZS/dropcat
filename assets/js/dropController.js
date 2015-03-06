@@ -16,7 +16,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 
 	//Endpoint Variable Storage
 	$scope.query = '';
-	$scope.catID = '28';
+	$scope.catID = 28;
 	$scope.catSlug = '';
 	$scope.catName = 'news';
 	$scope.catParentName = '';
