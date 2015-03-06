@@ -17,6 +17,8 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 	//Endpoint Variable Storage
 	$scope.query = '';
 	$scope.catName = 'news';
+	$scope.catParentName = '';
+	$scope.catChildName = '';
 
 	//Manipulatable Array Storage
 	$scope.posts = '';
@@ -41,12 +43,15 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 	};
 
 	$scope.getCatChildren = function(id){
+		console.log('evaluate children of '+id);
 		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.catEndPoint)
     		.success(function(response) 
     			{
     				var allCats = response;
     				for (i = 0; i < allCats.length; i++) {
-    					if ( (0 < allCats[i].parent.length) && (id == allCats[i].parent.ID) ) {
+    					//console.log(allCats[i].ID);
+    					if ( (null != allCats[i].parent) && (id == allCats[i].parent.ID) ) {
+    						console.log('child: '+allCats[i].ID);
     						$scope.categoryChildren.push(allCats[i]);
     					}
     				}

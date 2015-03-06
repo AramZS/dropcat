@@ -27,7 +27,20 @@
 			<img src="assets/images/logo1.gif">
 		</div>
 	</header>
-
+	<div class="row">
+		<div class="large-12 columns">
+			<label>Main Category</label>
+			<select ng-model="catName" ng-options="category.ID as category.name for category in categoryParents" ng-change="getCatChildren(catName)">
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<label>Child Category</label>
+			<select ng-switch on="catName" ng-model="catChildName" ng-options="category.slug as category.name for category in categoryChildren">
+			</select>
+		</div>
+	</div>
 <ul>
   <li ng-repeat="x in categoryParents">
     {{ x.name + ', ' + x.ID }}
