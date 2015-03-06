@@ -38,7 +38,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     		.success(function(response) 
     			{
     				console.log(response.slug);
-    				$scope.catSlug = response.slug;
+    				$scope.catName = response.slug;
     				$scope.getCatFeed(response.slug);
     			}
     		);
@@ -66,7 +66,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     				for (i = 0; i < allCats.length; i++) {
     					//console.log(allCats[i].ID);
     					if ( (null != allCats[i].parent) && (id == allCats[i].parent.ID) ) {
-    						console.log('child: '+allCats[i].ID);
+    						//console.log('child: '+allCats[i].ID);
     						$scope.categoryChildren.push(allCats[i]);
     					}
     				}
@@ -84,7 +84,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     					//console.log(allCats[i].parent);
     					if ( allCats[i].parent == null ) {
     						//console.log('was null');
-    						console.log(allCats[i].ID);
+    						//console.log(allCats[i].ID);
     						$scope.categoryParents.push(allCats[i]);
     					}
     				}
