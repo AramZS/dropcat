@@ -84,6 +84,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     					//console.log(allCats[i].parent);
     					if ( allCats[i].parent == null ) {
     						//console.log('was null');
+    						console.log(allCats[i].ID);
     						$scope.categoryParents.push(allCats[i]);
     					}
     				}

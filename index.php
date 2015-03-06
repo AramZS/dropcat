@@ -29,23 +29,18 @@
 	</header>
 	<div class="row">
 		<div class="large-12 columns">
-			<label>Main Category</label>
-			<select ng-model="catID" ng-options="category.ID as category.name for category in categoryParents" ng-change="getCatChildren(catID)">
+			<label>Main Category Operator is: {{catID}}</label>
+			<select ng-model="catID" ng-init="" ng-options="category.ID as category.name for category in categoryParents" ng-change="getCatChildren(catID)">
 			</select>
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
 			<label>Child Category</label>
-			<select ng-switch on="catID" ng-model="catChildID" ng-options="category.ID as category.name for category in categoryChildren" ng-change="getCatFeedByID(catChildID)">
+			<select ng-switch on="catID" ng-model="catChildID" ng-options="ccategory.ID as ccategory.name for ccategory in categoryChildren" ng-change="getCatFeedByID(catChildID)">
 			</select>
 		</div>
 	</div>
-<ul>
-  <li ng-repeat="x in categoryParents">
-    {{ x.name + ', ' + x.ID }}
-  </li>
-</ul>
 
 
   <label class="control-label">Category Slug:</label>
