@@ -30,14 +30,14 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<label>Main Category</label>
-			<select ng-model="catName" ng-options="category.ID as category.name for category in categoryParents" ng-change="getCatChildren(catName)">
+			<select ng-model="catID" ng-options="category.ID as category.name for category in categoryParents" ng-change="getCatChildren(catID)">
 			</select>
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
 			<label>Child Category</label>
-			<select ng-switch on="catName" ng-model="catChildName" ng-options="category.slug as category.name for category in categoryChildren">
+			<select ng-switch on="catID" ng-model="catChildID" ng-options="category.ID as category.name for category in categoryChildren" ng-change="getCatFeedByID(catChildID)">
 			</select>
 		</div>
 	</div>
@@ -49,7 +49,7 @@
 
 
   <label class="control-label">Category Slug:</label>
-  <div class="">
+  <div class=""> 
     <input type="text" ng-model="catName">
   </div>
   <button class="btn btn-success" ng-disabled="error || incomplete" ng-click="getCatFeed(catName)">

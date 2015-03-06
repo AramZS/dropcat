@@ -16,9 +16,11 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 
 	//Endpoint Variable Storage
 	$scope.query = '';
+	$scope.catID = '28';
+	$scope.catSlug = '';
 	$scope.catName = 'news';
 	$scope.catParentName = '';
-	$scope.catChildName = '';
+	$scope.catChildID = '';
 
 	//Manipulatable Array Storage
 	$scope.posts = '';
@@ -30,10 +32,22 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 	$scope.catChildInPlay = '';
 
 	// Get the feed from a category by name
+	$scope.getCatFeedByID = function(id) {
+		
+		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.catEndPoint+'/'+id)
+    		.success(function(response) 
+    			{
+    				console.log(response.slug);
+    				$scope.catSlug = response.slug;
+    				$scope.getCatFeed(response.slug);
+    			}
+    		);
+	};
+
+	// Get the feed from a category by name
 	$scope.getCatFeed = function(name) {
-		if (0 < name.length){
-			name = $scope.catName;
-		}
+
+		console.log('get feed for '+name);
 		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.postsEndPoint+$scope.categoryNameFilter+name)
     		.success(function(response) 
     			{
@@ -44,6 +58,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 
 	$scope.getCatChildren = function(id){
 		console.log('evaluate children of '+id);
+		$scope.getCatFeedByID(id);
 		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.catEndPoint)
     		.success(function(response) 
     			{
