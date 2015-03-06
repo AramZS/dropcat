@@ -52,7 +52,7 @@
 
 <ul>
   <li ng-repeat="x in posts">
-    {{ x.title + ', ' + x.ID }}
+    {{ x.title + ', ' + x.ID + ', ' + x.featured_image.attachment_meta.sizes.thumbnail.url }}
   </li>
 </ul>
 
