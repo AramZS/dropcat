@@ -41,15 +41,6 @@
 		</div>
 	</div>
 
-
-  <label class="control-label">Category Slug:</label>
-  <div class=""> 
-    <input type="text" ng-model="catName">
-  </div>
-  <button class="btn btn-success" ng-disabled="error || incomplete" ng-click="getCatFeed(catName)">
-  	<span class="glyphicon glyphicon-save"></span> Save Changes
-  </button>
-
 <ul>
   <li ng-repeat="x in posts">
     {{ x.title + ', ' + x.ID }}
