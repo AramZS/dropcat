@@ -40,13 +40,22 @@
 			</select>
 		</div>
 	</div>
-
-<ul>
-  <li ng-repeat="x in posts">
-    {{ x.title + ', ' + x.ID }}
-    <img src="{{x.featured_image.attachment_meta.sizes.thumbnail.url}}" />
-  </li>
-</ul>
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>The latest in </h2>
+			<hr />
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-10 large-offset-1 columns">
+			<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1">
+			  <li ng-repeat="x in posts" class="dc-gridblock">
+			    {{ x.title + ', ' + x.ID }}
+			    <img src="{{x.featured_image.attachment_meta.sizes.thumbnail.url}}" />
+			  </li>
+			</ul>
+		</div>
+	</div>
 
 
 <footer class="row">
