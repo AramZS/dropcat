@@ -3,6 +3,7 @@
 <?php require_once('functions.php'); ?>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8"/>
     <title>DropCat</title>
 	<link rel="stylesheet" href="assets/stylesheets/app.css" />
 	<script src="bower_components/modernizr/modernizr.js"></script>
@@ -81,6 +82,8 @@
 
 
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/he/he.js"></script>
 	<script src="lib/angularjs-wp-api/angular-wp-api.js"></script>
 	<script src="lib/ngResource/angular-resource.js"></script>
 	<script src="assets/js/app.js"></script>
