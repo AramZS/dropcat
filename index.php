@@ -49,11 +49,25 @@
 	</div>
 	<div class="row">
 		<div class="large-10 large-offset-1 columns primary-app-space">
-			<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1">
+			<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 primary-app-grid">
 			  <li ng-repeat="x in posts" class="dc-gridblock">
-			    <a href="{{ x.link }}" title="{{ x.title }}" class="item-title">{{ x.title }}</a>
-			    <img src="{{x.featured_image.attachment_meta.sizes.thumbnail.url}}" />
-			    <p>{{ x.excerpt }} ...</p>
+				  <div class="row item-row">
+				    <div class="large-12 columns">
+				    	<div class="row">
+				    		<div class="large-12 columns block-title">
+				    			<a href="{{ x.link }}" title="{{ x.title }}" class="item-title">{{ x.title }}</a>
+				    		</div>
+				    	</div>
+				    	<div class="row">
+				    		<div class="large-8 columns">
+				    			<p>{{ x.excerpt }} ...</p>
+				    		</div>
+				    		<div class="large-4 columns">
+				    			<img src="{{x.featured_image.attachment_meta.sizes.thumbnail.url}}" />
+				    		</div>
+				    	</div>
+					</div>
+				  </div>
 			  </li>
 			</ul>
 		</div>
@@ -64,13 +78,13 @@
 	<div class="large-12 columns crafted-with">
 		<div class="row">
 			<?php 
-				dropcat()->templates->the_view_for('crafted-with', array('by' => 'Crafted With:'));
+				dropcat()->templates->the_view_for('crafted-with', array('h' => '4', 'by' => 'Crafted With:'));
 
-				dropcat()->templates->the_view_for('crafted-with', array('by' => 'WordPress'));
+				dropcat()->templates->the_view_for('crafted-with', array('h' => '6', 'by' => 'WordPress', 'url' => 'http://wordpress.org'));
 
-				dropcat()->templates->the_view_for('crafted-with', array('by' => 'AngularJS'));
+				dropcat()->templates->the_view_for('crafted-with', array('h' => '6', 'by' => 'AngularJS', 'url' => 'http://angularjs.org'));
 
-				dropcat()->templates->the_view_for('crafted-with', array('by' => 'WP-API'));
+				dropcat()->templates->the_view_for('crafted-with', array('h' => '6', 'by' => 'WP-API', 'url' => 'http://wp-api.org'));
 			?>
 		</div>
 		<div class="row">

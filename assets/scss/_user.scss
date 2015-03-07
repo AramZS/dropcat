@@ -15,9 +15,45 @@ body {
 	.primary-app-space {
 		color: $black;
 		background-color: $white;
+		padding-top: 28px;
+		padding-bottom: 20px;
 		ul {
-			padding-top: 26px;
-			padding-bottom: 26px;
+			&.primary-app-grid {
+				
+				@include block-grid(
+				    // This controls how many elements will be on each row of the block grid. Set this to whatever number you need, up to the max allowed in the variable.
+				    // Available options: 1-12 by default, and false.
+				    $per-row: 3,
+
+				    // This controls how much space is between each item in the block grid.
+				    // Use a variable or any pixel or em values.
+				    $spacing: rem-calc(30), 
+
+				    // This controls whether or not base styles come through, set to false to leave out.
+				    $base-style: true
+			    );
+			}
+			li {
+				&.dc-gridblock{
+					padding-bottom: rem-calc(20);
+				}
+				.item-row {
+					
+				}
+				img {
+					margin: 4px;
+				}
+				p {
+					float:left;
+					overflow: hidden;
+				}
+				div {
+					overflow: hidden;
+				}
+				.block-title {
+					margin-bottom: 12px; 
+				}
+			}
 		}
 	}
 	footer {
