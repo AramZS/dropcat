@@ -1,8 +1,12 @@
+/* Author */
+This project by Aram Zucker-Scharff.
+http://hacktext.com
+
 /* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
 /* zurb.com */
 /* humanstxt.org */
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: jQuery, Orbit, Reveal
+  Components: jQuery, Orbit, Reveal, Foundation, AngularJS
   Software: Coda, Textmate, Git
