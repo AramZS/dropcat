@@ -6,6 +6,23 @@
 	<meta charset="utf-8"/>
     <title>DropCat</title>
 	<link rel="stylesheet" href="assets/stylesheets/app.css" />
+
+	<meta name="description" content="How can I build a tool for others that will shrink the filter bubble to as small as it can get?"/>
+	<link rel="canonical" href="http://chronoto.pe/dropcat/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Dropcat" />
+	<meta property="og:description" content="A tool for building a smaller web." />
+	<meta property="og:url" content="http://chronoto.pe/dropcat/" />
+	<meta property="og:site_name" content="Dropcat" />
+	<meta property="og:image" content="http://chronoto.pe/dropcat/assets/images/logo1.gif" />
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:description" content="Dropcat: a smaller web."/>
+	<meta name="twitter:title" content="Dropcat: a smaller web."/>
+	<meta name="twitter:site" content="@chronotope"/>
+	<meta name="twitter:domain" content="Chronoto.pe"/>
+	<meta name="twitter:creator" content="@chronotope"/>
+
 	<script src="bower_components/modernizr/modernizr.js"></script>
 
 </head>
