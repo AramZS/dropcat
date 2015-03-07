@@ -117,7 +117,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http, $int
 	}
 
 	$scope.timedCheck = function(){
-		//$scope.tickered = $interval(function() { $scope.getCatFeed($scope.catName) }, 5000 );
+		$scope.tickered = $interval(function() { $scope.getCatFeed($scope.catName) }, 6000 );
 	}
 	
 
