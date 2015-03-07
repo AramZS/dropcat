@@ -115,7 +115,8 @@
 					<a href="https://github.com/AramZS/dropcat" target="_blank">See the source code on GitHub</a>.
 				</p>
 			</div>
-
+		</div>
+	</div>
 
 
 
