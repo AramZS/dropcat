@@ -37,7 +37,7 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<h3>An AramZS "Myopic Web" Project</h3>
+					<h3>An AramZS <a href="http://hacktext.com/2015/03/the-myopic-web-shrinking-the-filter-bubble-with-dropcat-2212/" target="_blank">Myopic Web</a> Project</h3>
 				</div>
 			</div>
 		</div>

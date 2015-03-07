@@ -6,6 +6,8 @@ The site allows any user to search through the topics aggregated into the subjec
 
 The grid refreshes in real time! If you find a topic that interests you, just leave the browser window open and it will refresh with all the latest stories that come in under that topic. 
 
+Read more about this project at: http://hacktext.com/2015/03/the-myopic-web-shrinking-the-filter-bubble-with-dropcat-2212/
+
 ## About
 
 This project is currently in its test phase and is being built by me, Aram Zucker-Scharff. 
