@@ -5,8 +5,19 @@ body {
 	background-color: $black;
 	color: $white;
 	header {
-		h1, h2, h3 {
+		h1, h3 {
 			color: $white;
+		}
+	}
+	h2 {
+		color: $white; 
+	}
+	.primary-app-space {
+		color: $black;
+		background-color: $white;
+		ul {
+			padding-top: 26px;
+			padding-bottom: 26px;
 		}
 	}
 	footer {

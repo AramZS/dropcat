@@ -48,11 +48,12 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="large-10 large-offset-1 columns">
+		<div class="large-10 large-offset-1 columns primary-app-space">
 			<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1">
 			  <li ng-repeat="x in posts" class="dc-gridblock">
-			    {{ x.title + ', ' + x.ID }}
+			    <a href="{{ x.link }}" title="{{ x.title }}" class="item-title">{{ x.title }}</a>
 			    <img src="{{x.featured_image.attachment_meta.sizes.thumbnail.url}}" />
+			    <p>{{ x.excerpt }} ...</p>
 			  </li>
 			</ul>
 		</div>
