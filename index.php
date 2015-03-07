@@ -72,7 +72,7 @@
 				    <div class="large-12 columns">
 				    	<div class="row">
 				    		<div class="large-12 columns block-title">
-				    			<a href="{{ x.link }}" title="{{ x.title }}" class="item-title">{{ x.title }}</a>
+				    			<a href="{{ x.link }}" title="{{ x.title }}" class="item-title" target="_blank">{{ x.title }}</a>
 				    		</div>
 				    	</div>
 				    	<div class="row">
