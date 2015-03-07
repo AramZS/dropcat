@@ -73,6 +73,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http, $int
     					//console.log($scope.renderChars($scope.posts.title));
     					$scope.posts[i].title = $scope.renderChars($scope.posts[i].title);
     					$scope.posts[i].excerpt = $scope.posts[i].excerpt.substring(3,140);
+    					$scope.posts[i].excerpt = $scope.renderChars($scope.posts[i].excerpt);
     				}
 
     			}
