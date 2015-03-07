@@ -1,7 +1,7 @@
 /**
  * Controls all 
  */
-dropCatApp.controller('dropController', function ($scope, $location, $http) {
+dropCatApp.controller('dropController', function ($scope, $location, $http, $interval) {
 
 	//Site-wide URL pieces
 	$scope.baseUrl = 'http://chronoto.pe';
@@ -19,6 +19,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 	$scope.catID = 28;
 	$scope.catSlug = '';
 	$scope.catName = 'news';
+	$scope.catReadableName = 'News';
 	$scope.catParentName = '';
 	$scope.catChildID = '';
 
@@ -31,13 +32,23 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 	// @todo this - https://docs.angularjs.org/api/ng/service/$interval
 	$scope.catChildInPlay = '';
 
+	$scope.currentCatName = function(){
+		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.catEndPoint+'/'+$scope.catID)
+    		.success(function(response) 
+    			{
+    				
+    				$scope.catReadableName = response.name;
+    			}
+    		);
+	}
+
 	$scope.renderChars = function(string){
 		return he.decode(string);
 	}
 
 	// Get the feed from a category by name
 	$scope.getCatFeedByID = function(id) {
-		
+		$scope.catID = id;
 		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.catEndPoint+'/'+id)
     		.success(function(response) 
     			{
@@ -50,7 +61,8 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 
 	// Get the feed from a category by name
 	$scope.getCatFeed = function(name) {
-
+		$scope.catName = name;
+		$scope.currentCatName();
 		console.log('get feed for '+name);
 		$http.get($scope.baseUrl+$scope.jsonEndPoint+$scope.postsEndPoint+$scope.categoryNameFilter+name)
     		.success(function(response) 
@@ -61,6 +73,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     					$scope.posts[i].title = $scope.renderChars($scope.posts[i].title);
     					$scope.posts[i].excerpt = $scope.posts[i].excerpt.substring(3,140);
     				}
+
     			}
     		);
 	};
@@ -100,5 +113,10 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     			}
     		);	
 	}
+
+	$scope.timedCheck = function(){
+		$scope.tickered = $interval(function() { $scope.getCatFeed($scope.catName) }, 3000 );
+	}
+	
 
 });

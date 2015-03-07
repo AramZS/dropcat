@@ -10,7 +10,7 @@
 
 </head>
 
-<body ng-app="dropCat" ng-controller="dropController" ng-init="getCatFeed('news');getCategoryParents();">
+<body ng-app="dropCat" ng-controller="dropController" ng-init="getCatFeed('news');getCategoryParents();currentCatName();timedCheck();">
 	<header class="row">
 		<div class="large-10 columns">
 			<div class="row">
@@ -30,8 +30,8 @@
 	</header>
 	<div class="row">
 		<div class="large-6 medium-6 small-12 columns">
-			<label>Main Category Operator is: {{catID}}</label>
-			<select ng-model="catID" ng-init="" ng-options="category.ID as category.name for category in categoryParents" ng-change="getCatChildren(catID)">
+			<label>Main Category</label>
+			<select ng-model="mainCatID" ng-init="" ng-options="category.ID as category.name for category in categoryParents" ng-change="getCatChildren(mainCatID)">
 			</select>
 		</div>
 
@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-			<h2>The latest in </h2>
+			<h2>The latest in {{ catReadableName }}</h2>
 			<hr />
 		</div>
 	</div>
