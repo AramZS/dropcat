@@ -109,6 +109,12 @@
 				dropcat()->templates->the_view_for('crafted-with', array('by' => 'Foundation'));
 			?>
 		</div>
+		<div class="row">
+			<div class="large-12 columns crafted-with">
+				<p>
+					<a href="https://github.com/AramZS/dropcat" target="_blank">See the source code on GitHub</a>.
+				</p>
+			</div>
 
 
 
