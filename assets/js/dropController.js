@@ -31,6 +31,10 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
 	// @todo this - https://docs.angularjs.org/api/ng/service/$interval
 	$scope.catChildInPlay = '';
 
+	$scope.renderChars = function(string){
+		return he.decode(string);
+	}
+
 	// Get the feed from a category by name
 	$scope.getCatFeedByID = function(id) {
 		
@@ -52,6 +56,10 @@ dropCatApp.controller('dropController', function ($scope, $location, $http) {
     		.success(function(response) 
     			{
     				$scope.posts = response;
+    				for (i = 0; i < $scope.posts.length; i++) {
+    					//console.log($scope.renderChars($scope.posts.title));
+    					$scope.posts[i].title = $scope.renderChars($scope.posts[i].title);
+    				}
     			}
     		);
 	};
