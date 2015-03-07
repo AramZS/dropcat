@@ -17,6 +17,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http, $int
 	//Endpoint Variable Storage
 	$scope.query = '';
 	$scope.catID = 28;
+	$scope.mainCatID = 28;
 	$scope.catSlug = '';
 	$scope.catName = 'news';
 	$scope.catReadableName = 'News';
@@ -85,6 +86,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http, $int
     		.success(function(response) 
     			{
     				var allCats = response;
+    				$scope.categoryChildren = [];
     				for (i = 0; i < allCats.length; i++) {
     					//console.log(allCats[i].ID);
     					if ( (null != allCats[i].parent) && (id == allCats[i].parent.ID) ) {
@@ -115,7 +117,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http, $int
 	}
 
 	$scope.timedCheck = function(){
-		$scope.tickered = $interval(function() { $scope.getCatFeed($scope.catName) }, 3000 );
+		//$scope.tickered = $interval(function() { $scope.getCatFeed($scope.catName) }, 5000 );
 	}
 	
 
