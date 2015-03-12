@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": "true",
   "dependencies": {
-    "foundation": "zurb/bower-foundation",
+    "foundation": "~5.5.1",
     "he": "~0.5.0",
     "underscore": "~1.8.2"
   }
