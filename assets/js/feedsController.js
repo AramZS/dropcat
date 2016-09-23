@@ -9,10 +9,10 @@ dropCatApp.controller('feedsController', function ($scope, $location, $http, $in
 
 	//Base Endpoints
 	$scope.postsEndPoint = '/posts?type=pf_feed_item';
-	$scope.catEndPoint = '/taxonomies/category/terms';
+	$scope.catEndPoint = '/categories';
 
 	//Endpoint filters
-	$scope.categoryNameFilter = '?filter[category_name]=';
+	$scope.categoryNameFilter = '/';
 
 	//Endpoint Variable Storage
 	$scope.query = '';
