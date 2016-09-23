@@ -9,10 +9,10 @@ dropCatApp.controller('dropController', function ($scope, $location, $http, $int
 
 	//Base Endpoints
 	$scope.postsEndPoint = '/posts';
-	$scope.catEndPoint = '/taxonomies/category/terms';
+	$scope.catEndPoint = '/categories';
 
 	//Endpoint filters
-	$scope.categoryNameFilter = '?filter[category_name]=';
+	$scope.categoryNameFilter = '/';
 
 	//Endpoint Variable Storage
 	$scope.query = '';
