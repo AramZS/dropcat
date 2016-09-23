@@ -5,7 +5,7 @@ dropCatApp.controller('feedsController', function ($scope, $location, $http, $in
 
 	//Site-wide URL pieces
 	$scope.baseUrl = 'http://chronoto.pe';
-	$scope.jsonEndPoint = '/wp-json';
+	$scope.jsonEndPoint = '/wp-json/wp/v2';
 
 	//Base Endpoints
 	$scope.postsEndPoint = '/posts?type=pf_feed_item';
