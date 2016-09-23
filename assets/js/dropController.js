@@ -5,7 +5,7 @@ dropCatApp.controller('dropController', function ($scope, $location, $http, $int
 
 	//Site-wide URL pieces
 	$scope.baseUrl = 'http://chronoto.pe';
-	$scope.jsonEndPoint = '/wp-json';
+	$scope.jsonEndPoint = '/wp-json/wp/v2';
 
 	//Base Endpoints
 	$scope.postsEndPoint = '/posts';
